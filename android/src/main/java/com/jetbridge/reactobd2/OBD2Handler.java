@@ -265,6 +265,7 @@ public class OBD2Handler implements ObdProgressListener {
     // In order to upload data to a server.
     // commandResult.put(cmdID, cmdResult);
     WritableMap map = mArguments.createMap();
+    map.putString("timeStamp", String.valueOf(System.currentTimeMillis()));
     map.putString("cmdID", cmdID);
     map.putString("cmdName", cmdName);
     map.putString("cmdResult", cmdResult);
